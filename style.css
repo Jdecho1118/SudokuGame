@@ -1,0 +1,144 @@
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    margin: 0;
+}
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+
+.bg, .bg2, .bg3 {
+    background-image: linear-gradient(-60deg, #BFF098 50%, #6FD6FF 50%);
+    bottom: 0;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    right: -50%;
+    top: 0;
+    z-index: -1;
+}
+
+.bg {
+    animation: slide 3s ease-in-out infinite alternate;
+}
+
+.bg2 {
+    animation-direction: alternate-reverse;
+    animation-duration: 4s;
+}
+
+.bg3 {
+    animation-duration: 5s;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(25%);
+    }
+}
+#highScore {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+#highScoreValue {
+    font-weight: bold;
+    color: #e34b4b; 
+}
+
+/* Board Styles */
+#board {
+    width: 434px;
+    height: 445px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(211, 211, 211, 0.5); 
+}
+
+.tile {
+    width: 48px;
+    height: 48px;
+    border: 1px solid rgba(0, 0, 0, 0.799);
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile-start {
+    background-color: rgb(187, 183, 183);
+}
+
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
+}
+
+/* Digits Styles */
+#digits {
+    width: 450px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+    margin: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.number-selected {
+    background-color: gray;
+}
+
+/* Errors Styles */
+#errors {
+    color: coral;
+}
+
+/* Button Styles */
+button {
+    margin: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #e34b4b;
+}
